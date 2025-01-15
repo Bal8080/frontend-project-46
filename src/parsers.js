@@ -1,4 +1,4 @@
-// import yaml from 'js-yaml';
+import yaml from 'js-yaml';
 
 const parse = (data, format) => {
   switch (format) {
@@ -10,6 +10,6 @@ const parse = (data, format) => {
     default:
       throw new Error(`${format} is not supported`);
   }
-}
+};
 
 export default parse;
