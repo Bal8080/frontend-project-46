@@ -1,5 +1,5 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/Bal8080/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Bal8080/frontend-project-46/actions) [![Maintainability](https://api.codeclimate.com/v1/badges/472a7d6fe74f01dcb1db/maintainability)](https://codeclimate.com/github/Bal8080/frontend-project-46/maintainability) <a href="https://codeclimate.com/github/Bal8080/frontend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/472a7d6fe74f01dcb1db/test_coverage" /></a>
+[![Actions Status](https://github.com/Bal8080/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Bal8080/frontend-project-46/actions) [![Maintainability](https://api.codeclimate.com/v1/badges/472a7d6fe74f01dcb1db/maintainability)](https://codeclimate.com/github/Bal8080/frontend-project-46/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/472a7d6fe74f01dcb1db/test_coverage)](https://codeclimate.com/github/Bal8080/frontend-project-46/test_coverage)
 
 ### Difference Calculator
 
