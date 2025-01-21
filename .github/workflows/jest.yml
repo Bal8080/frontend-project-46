@@ -28,9 +28,15 @@ jobs:
       with:
         node-version: ${{ matrix.node }}
         cache: 'npm'
-    - run: make install
-    - run: make lint
-    - run: make test
+          # Run install project
+    - name: npm install
+      run: |
+        make install
+      env:
+        CI: true
+    - name: Run linter
+      run: |
+        make lint
     - name: Test & publish code coverage
         # Publish code coverage on Code Climate
         # https://github.com/paambaati/codeclimate-action
