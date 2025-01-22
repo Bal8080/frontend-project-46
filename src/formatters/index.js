@@ -16,8 +16,8 @@ const format = (formatName) => {
   //     throw new Error('Invalid format');
   // }
   const formats = {
-    stylish: stylish,
-    plain: plain,
+    stylish,
+    plain,
     json: JSON.stringify,
   };
   if (formats[formatName] !== undefined) {
