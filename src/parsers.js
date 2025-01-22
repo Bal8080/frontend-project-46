@@ -11,10 +11,10 @@ const parse = (format) => {
   //     throw new Error(`${format} is not supported`);
   // }
   const listFormats = {
-    'json': JSON.parse,
-    'yml': yaml.load,
-    'yaml': yaml.load
-  }
+    json: JSON.parse,
+    yml: yaml.load,
+    yaml: yaml.load,
+  };
   if (listFormats[format] !== undefined) {
     return listFormats[format];
   }

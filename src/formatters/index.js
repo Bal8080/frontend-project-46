@@ -16,10 +16,10 @@ const format = (formatName) => {
   //     throw new Error('Invalid format');
   // }
   const formats = {
-    'stylish': stylish,
-    'plain': plain,
-    'json': JSON.stringify
-  }
+    stylish: stylish,
+    plain: plain,
+    json: JSON.stringify,
+  };
   if (formats[formatName] !== undefined) {
     return formats[formatName];
   }
