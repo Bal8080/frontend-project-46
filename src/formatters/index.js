@@ -1,21 +1,29 @@
 import stylish from './stylish.js';
 import plain from './plain.js';
-import json from './json.js';
 
-const format = (data, formatName) => {
-  switch (formatName) {
-    case 'stylish': {
-      return stylish(data);
-    }
-    case 'plain': {
-      return plain(data);
-    }
-    case 'json': {
-      return json(data);
-    }
-    default:
-      throw new Error('Invalid format');
+const format = (formatName) => {
+  // switch (formatName) {
+  //   case 'stylish': {
+  //     return stylish(data);
+  //   }
+  //   case 'plain': {
+  //     return plain(data);
+  //   }
+  //   case 'json': {
+  //     return JSON.stringify(data);
+  //   }
+  //   default:
+  //     throw new Error('Invalid format');
+  // }
+  const formats = {
+    'stylish': stylish,
+    'plain': plain,
+    'json': JSON.stringify
   }
+  if (formats[formatName] !== undefined) {
+    return formats[formatName];
+  }
+  throw new Error('Invalid format');
 };
 
 export default format;

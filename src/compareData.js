@@ -20,6 +20,21 @@ const compareData = (obj1, obj2) => {
         type: 'deleted',
       };
     }
+    if ((Array.isArray(obj1[key]) && Array.isArray(obj2[key])) && _.isEqual(obj1[key], obj2[key])) {
+      return {
+        key,
+        value: obj1[key],
+        type: 'unchanged',
+      };
+    }
+    if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) {
+      return {
+        key,
+        valueBefore: obj1[key],
+        valueAfter: obj2[key],
+        type: 'changed',
+      };
+    }
     if (_.isObject(obj1[key]) && _.isObject(obj2[key])) {
       return {
         key,
