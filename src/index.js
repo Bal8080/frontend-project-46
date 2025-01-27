@@ -9,9 +9,7 @@ const readFile = (filepath) => fs.readFileSync(getAbsolutPath(filepath), 'utf-8'
 const getFormat = (filename) => filename.split('.')[1];
 
 const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
-  // const parsed1 = parse(readFile(filepath1), getFormat(filepath1));
   const parsed1 = parse(getFormat(filepath1))(readFile(filepath1));
-  // const parsed2 = parse(readFile(filepath2), getFormat(filepath2));
   const parsed2 = parse(getFormat(filepath2))(readFile(filepath2));
   const data = compareData(parsed1, parsed2);
 
